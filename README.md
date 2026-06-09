@@ -199,4 +199,4 @@ Reports are written to `outputs/` and dark-themed visualization plots (energy/la
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](file:///c:/codes/toolchain%20MoE%203d/LICENSE) for details.
+This project is licensed under the Apache-2.0 License. See [LICENSE](LICENSE) for details.
