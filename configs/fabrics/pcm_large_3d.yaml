@@ -1,0 +1,7 @@
+mesh_rows: 12
+mesh_cols: 12
+n_tiers: 8
+crossbar:
+  rows: 256
+  cols: 256
+  technology: pcm_gst

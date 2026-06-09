@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aimc-moe"
+version = "0.1.0"
+description = "Open-source toolchain for compiling MoE Transformers to 3D Analog In-Memory Computing"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "AIMC-MoE Contributors"}]
+readme = "README.md"
+keywords = ["analog", "in-memory-computing", "moe", "transformer", "crossbar", "RRAM", "PCM"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=2.1",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "pyyaml>=6.0",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+aihwkit = ["aihwkit>=0.9"]
+plotly = ["plotly>=5.0"]
+dev = ["pytest>=7.0", "pytest-cov", "ruff"]
+
+[project.scripts]
+aimc-moe-sim = "aimc_moe.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aimc_moe*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
